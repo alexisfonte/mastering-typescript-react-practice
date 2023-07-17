@@ -6,6 +6,10 @@ import ShoppingListForm from './components/ShoppingListForm';
 
 function App() {
   const [items, setItems] = useState<Item[]>([])
+  const addItem = (product: string) => {
+    console.log("here!")
+    console.log(product)
+  }
   // const items = [
   //   {id: 1, product: "lemon", quantity: 3},
   //   {id: 2, product: "chicken", quantity: 2},
@@ -13,7 +17,7 @@ function App() {
   return (
     <div >
       <ShoppingList items={items} />
-      <ShoppingListForm />
+      <ShoppingListForm onAddItem={addItem}/>
     </div>
   );
 }
