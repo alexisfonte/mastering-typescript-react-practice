@@ -1,8 +1,12 @@
 import React from 'react'
 
-function Greeter(): JSX.Element {
+interface GreeterProps {
+    person: string
+}
+
+function Greeter({ person }: GreeterProps): JSX.Element {
   return (
-    <h1>Hello!</h1>
+    <h1>Hello, {person}</h1>
   )
 }
 
